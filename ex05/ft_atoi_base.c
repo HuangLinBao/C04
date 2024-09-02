@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
+/*   By: HuangLinBao <HuangLinBao@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 14:40:52 by HuangLinBao       #+#    #+#             */
-/*   Updated: 2024/09/02 10:02:37 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/09/02 10:17:09 by HuangLinBao      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	ft_get_base(char *base)
 {
 	int		base_count;
 
-	base_count = 1;
+	base_count = 0;
 	while (*base)
 	{
 		base_count++;
@@ -106,3 +106,10 @@ int	ft_atoi_base(char *str, char *base)
 	}
 	return (res * sign);
 }
+
+// int main(void)
+// {
+//     char *base = "01";
+
+//     printf("%d\n", ft_atoi_base("1011011", base));
+// }
