@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: HuangLinBao <HuangLinBao@student.42.fr>    +#+  +:+       +#+        */
+/*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 14:16:29 by HuangLinBao       #+#    #+#             */
-/*   Updated: 2024/09/01 14:33:32 by HuangLinBao      ###   ########.fr       */
+/*   Updated: 2024/09/02 09:07:57 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);	
+	write(1, &c, 1);
 }
 
 void	ft_erreur(char *base, int *erreur)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -36,15 +36,14 @@ void	ft_erreur(char *base, int *erreur)
 				*erreur = 1;
 		}
 		if (base[i] == '+' || base[i] == '-' || base[i] == '%'
-				|| base[i] == '/' || base[i] == '*' || base[i] == '='
-				|| base[i] == ',' || base[i] == '.'
-				|| base[i] < 33 || base[i] > 126)
+			|| base[i] == '/' || base[i] == '*' || base[i] == '='
+			|| base[i] == ',' || base[i] == '.'
+			|| base[i] < 33 || base[i] > 126)
 			*erreur = 1;
 		else
 			i++;
 	}
 }
-
 
 void	ft_putnbr_base(int nbr, char *base)
 {
@@ -64,13 +63,9 @@ void	ft_putnbr_base(int nbr, char *base)
 			nb = -nb;
 		}
 		while (base[lbase])
-		{
 			lbase++;
-		}
 		if (nb < lbase)
-		{
 			ft_putchar(base[nb]);
-		}
 		if (nb >= lbase)
 		{
 			ft_putnbr_base(nb / lbase, base);
