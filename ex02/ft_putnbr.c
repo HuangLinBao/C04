@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: HuangLinBao <HuangLinBao@student.42.fr>    +#+  +:+       +#+        */
+/*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 13:32:21 by HuangLinBao       #+#    #+#             */
-/*   Updated: 2024/09/01 13:37:10 by HuangLinBao      ###   ########.fr       */
+/*   Updated: 2024/09/02 10:24:48 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
+
 void	ft_putnbr(int nb)
 {
 	if (nb == -2147483648)
