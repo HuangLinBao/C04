@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 14:40:52 by HuangLinBao       #+#    #+#             */
-/*   Updated: 2024/09/02 09:55:19 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/09/02 10:02:37 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_erreur(char *base)
 int	ft_value_of(char c)
 {
 	if (c >= '0' && c <= '9')
-		return (c - 48);
+		return (c - '0');
 	else if (c >= 'a' && c <= 'f')
 		return (c - 'a' + 10);
 	else if (c >= 'A' && c <= 'F')
@@ -73,7 +73,10 @@ int	ft_get_base(char *base)
 
 	base_count = 1;
 	while (*base)
+	{
 		base_count++;
+		base++;
+	}
 	return (base_count);
 }
 
@@ -101,5 +104,5 @@ int	ft_atoi_base(char *str, char *base)
 		res = res * lbase + ft_value_of(*str);
 		str++;
 	}
-	return (res);
+	return (res * sign);
 }
