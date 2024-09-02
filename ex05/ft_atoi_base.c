@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: HuangLinBao <HuangLinBao@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 11:51:26 by HuangLinBao       #+#    #+#             */
-/*   Updated: 2024/09/01 13:37:47 by HuangLinBao      ###   ########.fr       */
+/*   Created: 2024/09/01 14:40:52 by HuangLinBao       #+#    #+#             */
+/*   Updated: 2024/09/01 14:41:11 by HuangLinBao      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+int	ft_atoi_base(char *str, char *base)
 {
-    int		i;
-
-    i = 0;
-    while (str[i] != '\0')
-    {
-        write(1, &str[i], 1);
-        i++;
-    }
+	
 }
